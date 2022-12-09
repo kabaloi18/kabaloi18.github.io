@@ -1,0 +1,71 @@
+@import 'https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap';
+
+$primary-color: #18181B;
+$body-font: 'Quicksand', sans-serif;
+$title-color: #3B82F6;
+$font-color: #E4E4E7;
+
+html {
+    background-color: $primary-color;
+    padding: 0 250px;
+
+    @media only screen and (max-width: 600px) {
+        padding: 0 10px;
+    }
+}
+
+body {
+    font-family: $body-font;
+    color: $font-color;
+
+    p {
+        font-size: 2.5rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        p {
+            font-size: 1.25rem;
+        }
+    }
+
+}
+
+header {
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+
+        ul {
+            padding-left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+
+            li a {
+                text-decoration: none;
+                font-size: 30px;
+                color: $font-color;
+            }
+        }
+    }
+}
+
+body {
+    .intro-text a {
+        text-decoration: none;
+        color: $font-color;
+    }
+
+    .intro-text a:hover {
+        cursor: text;
+    }
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+}
