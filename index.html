@@ -1,43 +1,627 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
-    <title>Loi Chui Fong Kaba | Web Developer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Kaba Loi’s work and practice: experience in web design, development and client delivery, presented as an interactive book.">
+  <title>Kaba Loi — Work &amp; practice</title>
+  <link rel="stylesheet" href="website.css?v=e416413719a2">
 </head>
-<header>
-    <div class="header-container">
-        <p>Kaba Loi</p>
-        <!-- <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About me</a></li>
-            <li><a href="#">Works</a></li>
-            <li><a href="#">Contact me</a></li>
-        </ul> -->
-    </div>
-</header>
 <body>
-    <section class="intro-text">
-        <h1>I build things for the web.</h1>
-        <p>Software Engineer from Hong Kong.<br>
-            I’m passionate in 
-                <a href="" class="typewrite" data-period="2000" data-type='[ "Web development.", "UI/UX design.", "3D modeling." ]'>
-                    <span class="wrap"></span>
-                </a><br>
-            I’m currently hunting for my next career.<br>
-        <a class="contactme" href="mailto:kabaloi@proton.me" >Let's collaborate!</a></p>
+<main>
+<section id="pf-flipbook" aria-label="Kaba Loi 3D portfolio flipbook" data-ready="false" data-website>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&amp;family=Quicksand:wght@300;400;500&amp;family=Space+Grotesk:wght@400;500&amp;display=swap">
+<style>
+#pf-flipbook{--bk-paper:light-dark(#f7f4eb,#292a24);--bk-ink:light-dark(#272b27,#eeeee4);--bk-muted:light-dark(#666b62,#b2b7ac);--bk-line:light-dark(#c9cbbf,#51574b);--bk-stage:light-dark(#e9e8e1,#191c1a);--bk-blue:light-dark(#1c4ed8,#9eb9ff);--bk-cover-paper:light-dark(#f0ede3,#272a24);--bk-shadow:light-dark(#171d2933,#0009);--bk-edge:light-dark(#c1c2b7,#535848);font-family:'Space Grotesk',sans-serif;font-weight:400;line-height:1.5;color:var(--bk-ink);background:var(--bk-stage);container-type:inline-size;container-name:folio-type;width:100%;min-width:0;isolation:isolate}
+#pf-flipbook *{box-sizing:border-box}
+#pf-flipbook [hidden]{display:none!important}
+#pf-flipbook button,#pf-flipbook a{font:inherit;color:inherit}
+#pf-flipbook button{border:0;background:none;border-radius:0}
+#pf-flipbook a{text-decoration:none}
+#pf-flipbook h1,#pf-flipbook h2,#pf-flipbook h3,#pf-flipbook p,#pf-flipbook li{margin:0;font-family:'Space Grotesk',sans-serif;font-weight:400}
+#pf-flipbook .bk-mono{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:400;line-height:1.5;letter-spacing:.02em}
+#pf-flipbook .bk-header{padding:24px 34px 20px;border-bottom:1px solid var(--bk-line);display:flex;justify-content:space-between;gap:20px;align-items:center}
+#pf-flipbook .bk-brand{font-size:18px;font-weight:500;letter-spacing:-.025em}
+#pf-flipbook .bk-brand span{display:block;margin-top:5px;font-size:11px;font-weight:400;letter-spacing:0;color:var(--bk-muted)}
+#pf-flipbook .bk-edition{font-size:21px;font-weight:500;letter-spacing:-.035em;padding-right:96px}
+#pf-flipbook .bk-navigation{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:13px 34px}
+#pf-flipbook .bk-chapters{display:flex;gap:7px 20px;flex-wrap:wrap;align-items:center}
+#pf-flipbook .bk-chapters button{font-size:12px;font-weight:500;padding:8px 0;min-height:36px;border-bottom:1px solid transparent}
+#pf-flipbook .bk-chapters button[aria-current=page]{color:var(--bk-blue);border-color:var(--bk-blue)}
+#pf-flipbook .bk-hint{font-size:11px;color:var(--bk-muted);line-height:1.5}
+#pf-flipbook .bk-stage{padding:25px 28px 30px;perspective:2000px;position:relative;overflow:clip}
+#pf-flipbook .bk-rig{max-width:880px;margin:auto;position:relative;transform:rotateX(4deg);transform-style:preserve-3d;filter:drop-shadow(0 20px 15px var(--bk-shadow));transition:transform .8s ease}
+#pf-flipbook[data-page="0"][data-orientation="landscape"][data-flipping="false"] .bk-rig{transform:translateX(-25%) rotateX(4deg)}
+#pf-flipbook[data-back-cover="true"][data-orientation="landscape"][data-flipping="false"] .bk-rig{transform:translateX(25%) rotateX(4deg)}
+#pf-flipbook .bk-book{margin:auto;position:relative}
+#pf-flipbook .bk-book::after{content:'';position:absolute;left:0;right:0;bottom:-5px;height:6px;background:repeating-linear-gradient(0deg,var(--bk-edge) 0 1px,var(--bk-paper) 1px 2px);pointer-events:none;z-index:-1}
+#pf-flipbook[data-page="0"][data-orientation="landscape"] .bk-book::after{left:50%}
+#pf-flipbook[data-back-cover="true"][data-orientation="landscape"] .bk-book::after{right:50%}
+#pf-flipbook .bk-leaf{background:var(--bk-paper);color:var(--bk-ink);overflow:hidden;border:1px solid var(--bk-line)}
+#pf-flipbook .bk-page{height:100%;padding:28px 29px 20px;display:flex;flex-direction:column;position:relative;container-type:inline-size;background:var(--bk-paper);overflow:hidden}
+#pf-flipbook .bk-leaf.--left .bk-page{background:linear-gradient(270deg,color-mix(in srgb,var(--bk-ink) 8%,transparent),transparent 8%),var(--bk-paper)}
+#pf-flipbook .bk-leaf.--right .bk-page{background:linear-gradient(90deg,color-mix(in srgb,var(--bk-ink) 8%,transparent),transparent 8%),var(--bk-paper)}
+#pf-flipbook .bk-page-top{display:flex;justify-content:space-between;gap:12px;align-items:start;color:var(--bk-muted);padding-bottom:15px;border-bottom:1px solid var(--bk-line)}
+#pf-flipbook .bk-page-number{margin-top:auto;padding-top:18px;display:flex;justify-content:space-between;gap:8px;color:var(--bk-muted);font-size:11px;line-height:1.4}
+#pf-flipbook .bk-page-number>span:last-child{font-family:'IBM Plex Mono',monospace;font-weight:400}
+#pf-flipbook .bk-heading{font-weight:500;letter-spacing:-.035em;line-height:1.12;text-wrap:balance}
+#pf-flipbook .bk-cover .bk-page{background:var(--bk-cover-paper)!important;color:var(--bk-ink);padding:33px 35px 27px;box-shadow:inset 10px 0 18px color-mix(in srgb,var(--bk-ink) 6%,transparent)}
+#pf-flipbook .bk-cover .bk-page:before{content:'';position:absolute;top:0;bottom:0;left:10px;width:1px;background:var(--bk-line);pointer-events:none}
+#pf-flipbook .bk-cover .bk-page:after{content:'';position:absolute;top:0;bottom:0;left:0;width:3px;background:var(--bk-blue);pointer-events:none}
+#pf-flipbook .bk-cover-top{display:flex;justify-content:space-between;align-items:start;gap:18px;color:var(--bk-muted)}
+#pf-flipbook .bk-cover-title{font-size:64px;margin-top:90px!important;line-height:1.02;letter-spacing:-.045em}
+#pf-flipbook .bk-cover-title>span{display:block}
+#pf-flipbook .bk-cover-line{margin-top:30px!important;max-width:250px;font-size:14px;line-height:1.65;color:var(--bk-muted)}
+#pf-flipbook .bk-cover-bottom{margin-top:auto;padding-top:30px;border-top:1px solid var(--bk-line);display:flex;justify-content:space-between;align-items:end;gap:15px;font-size:11px;line-height:1.6;color:var(--bk-muted)}
+#pf-flipbook .bk-cover-mark{font-size:36px;font-weight:500;letter-spacing:-.05em;line-height:1;color:var(--bk-blue)}
+#pf-flipbook .bk-title{font-size:40px;margin:30px 0 25px!important}
+#pf-flipbook .bk-body{font-size:13px;line-height:1.65}
+#pf-flipbook .bk-body+.bk-body{margin-top:16px}
+#pf-flipbook .bk-section-label{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--bk-blue);line-height:1.5;letter-spacing:.05em;margin:23px 0 8px!important}
+#pf-flipbook .bk-decisions{padding-left:17px;margin:0;font-size:13px;line-height:1.55}
+#pf-flipbook .bk-decisions li+li{margin-top:9px}
+#pf-flipbook .bk-index{margin-top:15px}
+#pf-flipbook .bk-index button{width:100%;display:grid;grid-template-columns:28px 1fr 15px;align-items:center;gap:12px;text-align:left;padding:20px 0;border-bottom:1px solid var(--bk-line)}
+#pf-flipbook .bk-index-number{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--bk-blue)}
+#pf-flipbook .bk-index-title{display:block;font-size:24px;font-weight:500;letter-spacing:-.025em;line-height:1.2}
+#pf-flipbook .bk-index-type{display:block;font-size:11px;color:var(--bk-muted);margin-top:7px;line-height:1.5}
+#pf-flipbook .bk-index-note{font-size:12px;line-height:1.65;color:var(--bk-muted);margin-top:25px!important}
+#pf-flipbook .bk-intro-title{font-size:36px;margin:30px 0 24px!important}
+#pf-flipbook .bk-title-accent{color:var(--bk-blue)}
+#pf-flipbook .bk-emphasis{color:var(--bk-blue)}
+#pf-flipbook .bk-steps{margin-top:18px;border-top:1px solid var(--bk-line)}
+#pf-flipbook .bk-step{padding:10px 0;border-bottom:1px solid var(--bk-line);display:flex;justify-content:space-between;gap:20px;font-size:12px}
+#pf-flipbook .bk-step span:first-child{color:var(--bk-muted);font-family:'IBM Plex Mono',monospace;font-size:11px}
+#pf-flipbook .bk-contact-title{font-size:44px;margin:60px 0 30px!important}
+#pf-flipbook .bk-resume-download{align-self:flex-start;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:44px;padding:11px 15px;margin:0 0 12px;border:1px solid var(--bk-blue);color:var(--bk-blue);font-size:13px;font-weight:500;line-height:1.5;text-decoration:none}
+#pf-flipbook .bk-resume-download:focus-visible{outline:2px solid var(--bk-blue);outline-offset:4px}
+#pf-flipbook .bk-resume-download:active{background:var(--bk-blue);color:var(--bk-paper)}
+@media (hover:hover) and (pointer:fine){#pf-flipbook .bk-resume-download:hover{background:var(--bk-blue);color:var(--bk-paper)}}
+#pf-flipbook .bk-contact-link{display:block;padding:16px 0;border-bottom:1px solid var(--bk-line);font-size:14px;line-height:1.5;overflow-wrap:anywhere}
+#pf-flipbook .bk-contact-link span{float:right;color:var(--bk-blue)}
+#pf-flipbook .bk-contact-link[href^="mailto:"]{color:var(--bk-blue)}
+#pf-flipbook .bk-last .bk-page{justify-content:center;text-align:center;box-shadow:inset -10px 0 18px color-mix(in srgb,var(--bk-ink) 6%,transparent)}
+#pf-flipbook .bk-last .bk-page:before{left:auto;right:10px}
+#pf-flipbook .bk-last .bk-page:after{left:auto;right:0}
+#pf-flipbook .bk-last-title{font-size:48px;font-weight:500;letter-spacing:-.04em;line-height:1.08}
+#pf-flipbook .bk-last-name{font-size:13px;margin-top:23px!important;letter-spacing:.1em;color:var(--bk-blue)}
+#pf-flipbook .bk-last-note{font-size:12px;line-height:1.6;margin-top:25px!important;color:var(--bk-muted)}
+#pf-flipbook .bk-controls{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 34px;border-top:1px solid var(--bk-line)}
+#pf-flipbook .bk-controls button{font-size:13px;min-height:44px;padding:8px 0;min-width:85px}
+#pf-flipbook .bk-controls button:last-child{text-align:right}
+#pf-flipbook button:disabled{opacity:.38}
+#pf-flipbook .bk-status{font-size:11px;line-height:1.6;text-align:center;color:var(--bk-muted)}
+#pf-flipbook .bk-disclaimer{font-size:11px;line-height:1.5;color:var(--bk-muted);padding:0 34px 20px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+#pf-flipbook .bk-reading-control{font-size:12px;min-height:40px;padding:8px 0;text-align:left}
+#pf-flipbook .bk-loading{font-size:12px;color:var(--bk-muted);padding:12px 34px;text-align:center}
+#pf-flipbook[data-ready=false] [data-book] .bk-leaf:not(:first-child){display:none}
+#pf-flipbook[data-ready=false] .bk-book{width:min(100%,430px);height:660px}
+#pf-flipbook[data-ready=false] .bk-leaf:first-child{height:100%}
+#pf-flipbook .bk-reader{display:none}
+#pf-flipbook[data-reading=true] .bk-stage{display:none}
+#pf-flipbook[data-reading=true] .bk-reader{display:block;padding:16px 28px}
+#pf-flipbook .bk-reader .bk-leaf{margin:0 auto 24px;max-width:620px;min-height:600px}
+#pf-flipbook .bk-reader .bk-page{min-height:600px;height:auto}
+#pf-flipbook .bk-reader .bk-leaf[aria-hidden=true]{display:block}
+#pf-flipbook .bk-reader .bk-page-number{margin-top:28px}
+#pf-flipbook .bk-editorial-page .bk-title{font-size:36px;margin:30px 0 24px!important}
+#pf-flipbook .bk-role{font-size:13px;font-weight:500;line-height:1.5;margin-bottom:22px!important}
+#pf-flipbook .bk-role>span{display:block}
+#pf-flipbook .bk-role .bk-mono{margin-top:7px;color:var(--bk-muted)}
+#pf-flipbook .bk-timeline{margin-top:22px}
+#pf-flipbook .bk-timeline>div+div{margin-top:20px}
+#pf-flipbook .bk-timeline .bk-mono{color:var(--bk-blue)}
+#pf-flipbook .bk-timeline h3{font-size:19px;font-weight:500;letter-spacing:-.02em;line-height:1.25;margin:6px 0 7px}
+#pf-flipbook .bk-timeline p{font-size:12px;line-height:1.6}
+#pf-flipbook .bk-timeline p+p{margin-top:8px}
+#pf-flipbook .bk-skill-group{padding:14px 0;border-top:1px solid var(--bk-line)}
+#pf-flipbook .bk-skill-group h3{font-size:13px;font-weight:500;line-height:1.5;margin-bottom:8px}
+#pf-flipbook .bk-skill-group p{font-size:12px;line-height:1.7}
+#pf-flipbook .bk-contact-intro{margin-bottom:25px!important}
+#pf-flipbook .bk-background-page .bk-title{margin:20px 0 18px!important}
+#pf-flipbook .bk-foundation-history p{font-size:12px;line-height:1.6}
+#pf-flipbook .bk-foundation-job>.bk-mono{color:var(--bk-muted)}
+#pf-flipbook .bk-foundation-job h3{font-size:18px;font-weight:500;letter-spacing:-.02em;line-height:1.25;margin:5px 0 3px}
+#pf-flipbook .bk-foundation-job .bk-history-role{font-weight:500;margin-bottom:5px}
+#pf-flipbook .bk-foundation-study{margin-top:11px}
+#pf-flipbook .bk-foundation-study .bk-mono{color:var(--bk-muted)}
+#pf-flipbook .bk-study-subject{font-weight:500}
+#pf-flipbook .bk-early-work{margin-top:18px;padding-top:13px;border-top:1px solid var(--bk-line)}
+#pf-flipbook .bk-early-work-heading{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+#pf-flipbook .bk-early-work-heading h3{font-size:18px;font-weight:500;letter-spacing:-.02em;line-height:1.25}
+#pf-flipbook .bk-early-work-heading>.bk-mono{color:var(--bk-muted)}
+#pf-flipbook .bk-archive-figure{display:grid;grid-template-columns:42% 1fr;gap:12px;align-items:start;margin:10px 0 0}
+#pf-flipbook .bk-archive-preview{display:block;width:100%;padding:0;text-align:left}
+#pf-flipbook .bk-archive-preview>.bk-archive-label{display:flex;justify-content:space-between;gap:8px;margin-top:5px;font-size:11px;line-height:1.5;color:var(--bk-blue)}
+#pf-flipbook .bk-archive-figure figcaption{font-size:12px;line-height:1.6}
+#pf-flipbook .bk-archive-dialog{width:calc(100% - 32px);max-width:1000px;max-height:calc(100% - 32px);padding:20px;margin:auto;border:1px solid var(--bk-line);background:var(--bk-paper);color:var(--bk-ink);box-shadow:0 15px 60px var(--bk-shadow)}
+#pf-flipbook .bk-archive-dialog::backdrop{background:light-dark(#171d2970,#000a)}
+#pf-flipbook .bk-archive-dialog-heading{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:16px}
+#pf-flipbook .bk-archive-dialog h2{font-size:20px;font-weight:500;line-height:1.3;letter-spacing:-.02em}
+#pf-flipbook .bk-archive-dialog-heading .bk-mono{color:var(--bk-muted);margin-bottom:3px}
+#pf-flipbook .bk-archive-dialog button{min-height:44px;padding:8px 0;font-size:13px;white-space:nowrap;flex-shrink:0;color:var(--bk-blue)}
+#pf-flipbook .bk-archive-description{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+/* The archived design keeps its original desktop dimensions, colours and type. */
+#pf-flipbook .bk-legacy-site{display:block;position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#18181b;text-align:left}
+#pf-flipbook .bk-legacy-canvas{display:block;position:absolute;left:0;top:0;width:1280px;height:720px;padding:0 250px;overflow:hidden;background:#18181b;color:#e4e4e7;font-family:'Quicksand',sans-serif;font-size:16px;font-weight:400;line-height:normal;letter-spacing:normal;text-align:left;text-wrap:wrap;transform:scale(var(--legacy-scale,.125));transform-origin:top left;pointer-events:none}
+#pf-flipbook .bk-legacy-canvas span{font-family:inherit;font-weight:inherit;letter-spacing:normal}
+#pf-flipbook .bk-legacy-body{display:block;margin:8px}
+#pf-flipbook .bk-legacy-header{display:flex;justify-content:space-between}
+#pf-flipbook .bk-legacy-name{display:block;font-size:40px;line-height:normal;margin:40px 0}
+#pf-flipbook .bk-legacy-intro{display:block}
+#pf-flipbook .bk-legacy-canvas .bk-legacy-headline{display:block;font-size:32px;font-weight:700;line-height:normal;margin:21.44px 0}
+#pf-flipbook .bk-legacy-copy{display:block;font-size:40px;line-height:normal;margin:40px 0}
+#pf-flipbook .bk-legacy-wrap{border-right:.08em solid #fff}
+#pf-flipbook .bk-legacy-footer{display:block;position:absolute;left:0;bottom:5px;width:100%;font-size:16px;line-height:normal;text-align:center}
+/* Working-style pages use the page depth to separate practical parts of the job. */
+#pf-flipbook .bk-practice-page .bk-title{font-size:34px;margin:10px 0 18px!important}
+#pf-flipbook .bk-practice-intro{font-size:15px;line-height:1.5;max-width:355px}
+#pf-flipbook .bk-practice-sections{display:flex;flex-direction:column;justify-content:space-between;gap:10px;flex:1;min-height:0;margin-top:24px}
+#pf-flipbook .bk-practice-section{border-top:1px solid var(--bk-line);padding-top:12px}
+#pf-flipbook .bk-practice-page h3{font-size:17px;font-weight:500;line-height:1.25;letter-spacing:-.015em;margin:0 0 7px}
+#pf-flipbook .bk-practice-section p,#pf-flipbook .bk-product-feedback p,#pf-flipbook .bk-work-ledger{font-size:13px;line-height:1.6}
+#pf-flipbook .bk-practice-page .bk-page-number{flex:none;padding-top:20px}
+#pf-flipbook .bk-work-ledger{margin:26px 0 0;padding:0}
+#pf-flipbook .bk-work-ledger>div{display:grid;grid-template-columns:92px minmax(0,1fr);gap:12px;border-top:1px solid var(--bk-line);padding:15px 0}
+#pf-flipbook .bk-work-ledger>div:last-child{border-bottom:1px solid var(--bk-line)}
+#pf-flipbook .bk-work-ledger dt{font-weight:500}
+#pf-flipbook .bk-work-ledger dd{margin:0}
+#pf-flipbook .bk-product-feedback{margin-top:auto;padding-top:22px}
+@container folio-type (max-width:480px){
+  #pf-flipbook .bk-editorial-page.bk-practice-page .bk-title{font-size:30px;margin:8px 0 18px!important}
+  #pf-flipbook .bk-practice-intro{font-size:13px;line-height:1.5}
+  #pf-flipbook .bk-practice-page:not(.bk-delivery-page) .bk-practice-intro{font-size:14px;line-height:1.55;max-width:none}
+  #pf-flipbook .bk-practice-sections{flex:0 0 auto;justify-content:flex-start;margin-top:24px;gap:20px}
+  #pf-flipbook .bk-practice-section{padding-top:12px}
+  #pf-flipbook .bk-practice-page h3{font-size:15px;line-height:1.25;margin-bottom:5px}
+  #pf-flipbook .bk-practice-section p,#pf-flipbook .bk-product-feedback p,#pf-flipbook .bk-work-ledger{font-size:12px;line-height:1.55}
+  #pf-flipbook .bk-practice-section h3{font-size:16px;margin-bottom:7px}
+  #pf-flipbook .bk-practice-section p{font-size:13px;line-height:1.6}
+  #pf-flipbook .bk-practice-page .bk-page-number{padding-top:16px}
+  #pf-flipbook .bk-work-ledger{margin-top:20px}
+  #pf-flipbook .bk-work-ledger>div{display:block;padding:12px 0}
+  #pf-flipbook .bk-work-ledger dt,#pf-flipbook .bk-work-ledger dd{display:inline}
+  #pf-flipbook .bk-work-ledger dt{margin-right:5px}
+  #pf-flipbook .bk-product-feedback{padding-top:18px}
+}
+@container folio-type (max-width:360px){
+  #pf-flipbook .bk-practice-page:not(.bk-delivery-page) .bk-practice-intro{font-size:13px;line-height:1.5}
+  #pf-flipbook .bk-practice-sections{margin-top:20px;gap:18px}
+  #pf-flipbook .bk-practice-section h3{font-size:15px}
+  #pf-flipbook .bk-practice-section p{font-size:12px;line-height:1.55}
+}
+@container folio-type (max-width:700px){
+  #pf-flipbook .bk-header{padding:20px 22px}
+  #pf-flipbook .bk-edition{padding-right:80px}
+  #pf-flipbook .bk-navigation{padding:10px 22px;gap:6px}
+  #pf-flipbook .bk-hint{width:100%;margin-bottom:2px}
+  #pf-flipbook .bk-stage{padding:24px 18px}
+  #pf-flipbook .bk-controls{padding:12px 22px}
+  #pf-flipbook .bk-disclaimer{padding:0 22px 18px}
+  #pf-flipbook .bk-chapters{gap:5px 17px}
+}
+@container folio-type (max-width:480px){
+  #pf-flipbook .bk-header{padding:18px}
+  #pf-flipbook .bk-brand{font-size:17px}
+  #pf-flipbook .bk-edition{font-size:19px;padding-right:0}
+  #pf-flipbook .bk-navigation{padding:7px 18px}
+  #pf-flipbook .bk-chapters{gap:3px 15px}
+  #pf-flipbook .bk-chapters button{font-size:11px;min-height:40px}
+  #pf-flipbook .bk-stage{padding:20px 12px 23px}
+  #pf-flipbook .bk-rig{transform:rotateX(2deg)}
+  #pf-flipbook .bk-page{padding:23px 20px 18px}
+  #pf-flipbook .bk-title{font-size:32px;margin:26px 0 22px!important}
+  #pf-flipbook .bk-editorial-page .bk-title{font-size:30px;margin:26px 0 22px!important}
+  #pf-flipbook .bk-body,#pf-flipbook .bk-decisions{font-size:12px;line-height:1.65}
+  #pf-flipbook .bk-section-label{margin-top:18px!important}
+  #pf-flipbook .bk-cover .bk-page{padding:28px 25px 24px}
+  #pf-flipbook .bk-cover-title{font-size:clamp(38px,20cqi,54px);margin-top:90px!important}
+  #pf-flipbook .bk-cover-line{font-size:13px}
+  #pf-flipbook .bk-cover-mark{font-size:32px}
+  #pf-flipbook .bk-intro-title{font-size:30px;margin:30px 0 24px!important}
+  #pf-flipbook .bk-contact-title{font-size:30px;margin:60px 0 28px!important}
+  #pf-flipbook .bk-last-title{font-size:34px}
+  #pf-flipbook .bk-index button{grid-template-columns:22px 1fr 12px;gap:8px;padding:16px 0}
+  #pf-flipbook .bk-index-title{font-size:20px}
+  #pf-flipbook .bk-index-type{margin-top:5px;line-height:1.4}
+  #pf-flipbook .bk-timeline{margin-top:18px}
+  #pf-flipbook .bk-timeline>div+div{margin-top:14px}
+  #pf-flipbook .bk-timeline h3{font-size:18px}
+  #pf-flipbook .bk-timeline p{font-size:11px;line-height:1.6}
+  #pf-flipbook .bk-skill-group{padding:12px 0}
+  #pf-flipbook .bk-skill-group p{font-size:11px}
+  #pf-flipbook .bk-role{font-size:12px;margin-bottom:18px!important}
+  #pf-flipbook .bk-background-page .bk-title{margin:18px 0 16px!important}
+  #pf-flipbook .bk-foundation-history p{font-size:11px}
+  #pf-flipbook .bk-foundation-job h3{font-size:17px}
+  #pf-flipbook .bk-foundation-study{margin-top:9px}
+  #pf-flipbook .bk-early-work{margin-top:15px;padding-top:11px}
+  #pf-flipbook .bk-archive-figure{grid-template-columns:1fr;gap:9px;margin-top:8px}
+  #pf-flipbook .bk-archive-preview{width:140px;max-width:100%}
+  #pf-flipbook .bk-archive-preview>.bk-archive-label{margin-top:3px}
+  #pf-flipbook .bk-archive-dialog{padding:15px}
+  #pf-flipbook .bk-controls{padding:10px 18px;gap:8px}
+  #pf-flipbook .bk-controls button{min-width:65px;font-size:12px}
+  #pf-flipbook .bk-disclaimer{padding:0 18px 18px}
+  #pf-flipbook .bk-reader{padding:10px 12px}
+}
+@media(prefers-reduced-motion:reduce){#pf-flipbook .bk-rig{transition:none}}
+</style>
+<header class="bk-header"><div class="bk-brand">Kaba Loi<span>Design + development / Hong Kong</span></div></header>
+
+<div class="bk-stage"><div class="bk-web-viewport" data-book-viewport><div class="bk-rig" data-book-rig><div class="bk-book" data-book>
+<article class="bk-leaf bk-cover" data-density="hard" aria-label="Front cover" data-chapter="Cover">
+  <div class="bk-page">
+    
+    <h1 class="bk-cover-title bk-heading">Work &amp;<span>practice.</span></h1>
+    <p class="bk-cover-line">A designer’s experience.<br>A developer’s perspective.<br>From conversation to delivery.</p>
+    
+  </div>
+</article>
+<article class="bk-leaf" aria-label="Contents" data-chapter="Contents &amp; introduction">
+  <div class="bk-page">
+    
+    <h2 class="bk-title bk-heading">Contents.</h2>
+    <div class="bk-index">
+      <button type="button" class="cursor-interaction" data-book-goto="3"><span class="bk-index-number">03</span><span><span class="bk-index-title">Experience</span><span class="bk-index-type">Odoo · earlier work &amp; education</span></span><span aria-hidden="true">↗</span></button>
+      <button type="button" class="cursor-interaction" data-book-goto="5"><span class="bk-index-number">05</span><span><span class="bk-index-title">Working style</span><span class="bk-index-type">Client conversations · design &amp; delivery</span></span><span aria-hidden="true">↗</span></button>
+      
+      <button type="button" class="cursor-interaction" data-book-goto="8"><span class="bk-index-number">08</span><span><span class="bk-index-title">Contact</span><span class="bk-index-type">Start a conversation</span></span><span aria-hidden="true">↗</span></button>
+    </div>
+    <div class="bk-page-number"><span></span><span>01</span></div>
+  </div>
+</article>
+<article class="bk-leaf" aria-label="Introduction" data-chapter="Contents &amp; introduction">
+  <div class="bk-page">
+    
+    <h2 class="bk-intro-title bk-heading">From a first conversation to a <span class="bk-title-accent">working website.</span></h2>
+    <p class="bk-body">I’m Kaba, a web designer with a background in interaction design and software engineering. I work directly with clients, connect design choices with technical possibilities, and carry websites through to launch and handover.</p>
+    <div class="bk-steps"><div class="bk-step"><span>01</span><span>Listen &amp; define</span></div><div class="bk-step"><span>02</span><span>Design &amp; review</span></div><div class="bk-step"><span>03</span><span>Build &amp; deliver</span></div></div>
+    <div class="bk-page-number"><span></span><span>02</span></div>
+  </div>
+</article>
+<article class="bk-leaf" aria-label="Experience at Odoo" data-chapter="Experience">
+  <div class="bk-page bk-editorial-page">
+    
+    <h2 class="bk-title bk-heading">From brief to handover.</h2>
+    <p class="bk-role"><span>Web Designer (APAC) · Odoo HK Ltd.</span><span class="bk-mono">February 2023–present</span></p>
+    <p class="bk-body">I work with clients across Hong Kong, Southeast Asia, Australia and New Zealand. I’ve <span class="bk-emphasis">led the majority of approximately 55 website projects</span>, covering requirements, interface design, front-end development, launch and handover.</p>
+    <p class="bk-body">Some projects involve development only. Across both kinds of work, I explain what Odoo can support and the design or feature trade-offs involved, including considerations when moving an existing website to the platform.</p>
+    <div class="bk-page-number"><span></span><span>03</span></div>
+  </div>
+</article>
+<article class="bk-leaf" aria-label="Earlier experience and education" data-chapter="Experience">
+  <div class="bk-page bk-editorial-page bk-background-page">
+    
+    <h2 class="bk-title bk-heading">Early years.</h2>
+    <div class="bk-foundation-history">
+      <div class="bk-foundation-job"><span class="bk-mono">2019 — 2020 / EXPERIENCE</span><h3>Solution Forest Ltd.</h3><p class="bk-history-role">Web Programmer</p><p>Built responsive websites and CMS, clarifying requirements and resolving technical issues with teammates.</p></div>
+      <div class="bk-foundation-study"><p><span class="bk-mono">2020–2022</span> · <span class="bk-study-subject bk-emphasis">Interaction Design</span><br>BSc · National Taipei University of Technology</p></div>
+      <div class="bk-foundation-study"><p><span class="bk-mono">2017–2019</span> · <span class="bk-study-subject bk-emphasis">Software Engineering</span><br>Higher Diploma · HK IVE, Tsing Yi</p></div>
+    </div>
+    <section class="bk-early-work" aria-label="Early work, personal website, 2022">
+      <div class="bk-early-work-heading"><h3>Early work.</h3><span class="bk-mono">2022</span></div>
+      <figure class="bk-archive-figure">
+        <button type="button" class="bk-archive-preview cursor-interaction" data-archive-preview aria-label="Open the live 2022 personal website preview"><span class="bk-legacy-site" data-legacy-site aria-hidden="true">
+  <span class="bk-legacy-canvas">
+    <span class="bk-legacy-body">
+      <span class="bk-legacy-header"><span class="bk-legacy-name">Kaba Loi</span></span>
+      <span class="bk-legacy-intro">
+        <span class="bk-legacy-headline">I build things for the web.</span>
+        <span class="bk-legacy-copy">Software Engineer from Hong Kong.<br>I’m passionate in <span class="bk-legacy-typewrite" data-legacy-typewriter data-period="2000" data-type='["Web development.","UI/UX design.","3D modeling."]'><span class="bk-legacy-wrap" data-legacy-text>Web development.</span></span><br>I’m currently hunting for my next career.<br><span>Let's collaborate!</span></span>
+      </span>
+    </span>
+    <span class="bk-legacy-footer">© 2022 by Kaba. All rights reserved.</span>
+  </span>
+</span><span class="bk-archive-label">View original <span aria-hidden="true">↗</span></span></button>
+        <figcaption>My 2022 site introduced my design and development interests. Today, I take client websites from requirements through to handover.</figcaption>
+      </figure>
     </section>
-    <section class="work-category">
-        
+    <div class="bk-page-number"><span></span><span>04</span></div>
+  </div>
+</article>
+<article class="bk-leaf" aria-label="Working with clients" data-chapter="Working style">
+  <div class="bk-page bk-editorial-page bk-practice-page">
+    
+    <h2 class="bk-title bk-heading bk-title-accent">Timeline, budget<br>and quality.</h2>
+    <p class="bk-practice-intro">I help clients weigh their ideas against the time and budget available, and the quality they expect.</p>
+    <div class="bk-practice-sections">
+      <section class="bk-practice-section">
+        <h3>What a request involves</h3>
+        <p>I look at a request as <span class="bk-emphasis">both a designer and a developer</span>. That helps me explain the visual and technical work involved.</p>
+      </section>
+      <section class="bk-practice-section">
+        <h3>What fits the scope</h3>
+        <p>I discuss how a change affects the time and budget needed to achieve the quality we’re aiming for.</p>
+      </section>
+      <section class="bk-practice-section">
+        <h3>What we agree to deliver</h3>
+        <p>We agree on a workable scope and clear expectations for delivery. I stay involved through the build, launch and client handover.</p>
+      </section>
+    </div>
+    <div class="bk-page-number"><span></span><span>05</span></div>
+  </div>
+</article>
+<article class="bk-leaf" aria-label="Design through delivery" data-chapter="Working style">
+  <div class="bk-page bk-editorial-page bk-practice-page bk-delivery-page">
+    
+    <h2 class="bk-title bk-heading">Several projects<br>at once.</h2>
+    <p class="bk-practice-intro">With several projects running at once, I keep track of the work agreed, the hours available and the delivery schedule.</p>
+    <dl class="bk-work-ledger">
+      <div><dt>Estimate.</dt><dd>I estimate effort and work with Sales on website scope and technical solutions during pre-sales.</dd></div>
+      <div><dt>Track.</dt><dd>I record time in timesheets and keep track of <span class="bk-emphasis">allocated and remaining project hours</span>.</dd></div>
+      <div><dt>Coordinate.</dt><dd>I manage <span class="bk-emphasis">timelines and deliverables</span> as priorities change, through launch and handover.</dd></div>
+    </dl>
+    <section class="bk-product-feedback">
+      <h3>Back to the product</h3>
+      <p>I share client feedback, report bugs and suggest UI/UX improvements to the Product Owner, bringing issues from project work into product discussions.</p>
     </section>
+    <div class="bk-page-number"><span></span><span>06</span></div>
+  </div>
+</article>
+<article class="bk-leaf" aria-label="Skills and tools" data-chapter="Skills &amp; contact">
+  <div class="bk-page bk-editorial-page bk-skills-page">
+    
+    <h2 class="bk-title bk-heading"><span class="bk-title-accent">Designer’s</span> mind. <span class="bk-title-accent">Developer’s</span> hands.</h2>
+    <div class="bk-skill-group"><h3>Design</h3><p>Responsive web design<br>UI/UX prototyping · Design reviews<br>Figma</p></div>
+    <div class="bk-skill-group"><h3>Collaboration</h3><p>Requirements gathering<br>Client communication · Product feedback<br>Project coordination</p></div>
+    <div class="bk-skill-group"><h3>Development</h3><p>HTML · CSS/SCSS · JavaScript<br>Odoo · WordPress · Laravel/PHP<br>Git · Postman</p></div>
+    <div class="bk-page-number"><span></span><span>07</span></div>
+  </div>
+</article>
+<article class="bk-leaf" aria-label="Contact Kaba Loi" data-chapter="Skills &amp; contact">
+  <div class="bk-page">
+    
+    <h2 class="bk-contact-title bk-heading">A conversation starts here.</h2>
+    <p class="bk-body bk-contact-intro">To talk about my experience, approach or a role you’re hiring for, you can reach me here.</p>
+    <a class="bk-resume-download cursor-interaction" href="downloads/Kaba-Loi-Resume.pdf?v=f0d47cd62374" download="Kaba-Loi-Resume.pdf" type="application/pdf">Download résumé (PDF) <span aria-hidden="true">↓</span></a>
+    <a class="bk-contact-link cursor-interaction" href="mailto:contact@kabaloi.com">contact@kabaloi.com <span aria-hidden="true">↗</span></a>
+    <a class="bk-contact-link cursor-interaction" href="https://www.linkedin.com/in/kabaloi/" target="_blank" rel="noopener noreferrer">LinkedIn / kabaloi <span aria-hidden="true">↗</span></a>
+    <div class="bk-page-number"><span></span><span>08</span></div>
+  </div>
+</article>
+<article class="bk-leaf bk-cover bk-last" data-density="hard" aria-label="Back cover" data-chapter="Skills &amp; contact">
+  <div class="bk-page"><div class="bk-last-title">Thank you.</div><p class="bk-last-name">KABA LOI</p><p class="bk-last-note">Design with care.<br>Carry it through.</p></div>
+</article>
+</div></div></div></div>
+<div class="bk-reader" data-book-reader></div>
+<div class="bk-loading" data-book-loading>Preparing the book…</div>
+<footer class="bk-controls"><button type="button" class="cursor-interaction" data-book-prev disabled>← Previous</button><p class="bk-status" data-book-status role="status" aria-live="polite">Front cover</p><button type="button" class="cursor-interaction" data-book-next disabled>Open book →</button></footer>
+<div class="bk-disclaimer"><span>Work &amp; practice · Kaba Loi</span><button type="button" class="bk-reading-control cursor-interaction" data-book-reading>Read without page turns</button></div>
+<dialog class="bk-archive-dialog" data-archive-dialog aria-labelledby="bk-archive-title" aria-describedby="bk-archive-description"><div class="bk-archive-dialog-heading"><div><p class="bk-mono">EARLY WORK · 2022</p><h2 id="bk-archive-title">Personal website.</h2></div><button type="button" class="cursor-interaction" data-archive-close>Close <span aria-hidden="true">×</span></button></div><p id="bk-archive-description" class="bk-archive-description">A live preview of Kaba Loi’s 2022 personal website. Its original typewriter cycles through Web development, UI/UX design and 3D modeling.</p><span class="bk-legacy-site" data-legacy-site aria-hidden="true">
+  <span class="bk-legacy-canvas">
+    <span class="bk-legacy-body">
+      <span class="bk-legacy-header"><span class="bk-legacy-name">Kaba Loi</span></span>
+      <span class="bk-legacy-intro">
+        <span class="bk-legacy-headline">I build things for the web.</span>
+        <span class="bk-legacy-copy">Software Engineer from Hong Kong.<br>I’m passionate in <span class="bk-legacy-typewrite" data-legacy-typewriter data-period="2000" data-type='["Web development.","UI/UX design.","3D modeling."]'><span class="bk-legacy-wrap" data-legacy-text>Web development.</span></span><br>I’m currently hunting for my next career.<br><span>Let's collaborate!</span></span>
+      </span>
+    </span>
+    <span class="bk-legacy-footer">© 2022 by Kaba. All rights reserved.</span>
+  </span>
+</span></dialog>
+<script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+<script>
+(() => {
+  const root=document.getElementById('pf-flipbook');
+  if(!root)return;
+  const website=root.hasAttribute('data-website');
+  const stage=root.querySelector('.bk-stage');
+  const bookViewport=root.querySelector('[data-book-viewport]');
+  const rig=root.querySelector('[data-book-rig]');
+  const templates=[...root.querySelectorAll('.bk-leaf')].map(p=>p.cloneNode(true));
+  const previous=root.querySelector('[data-book-prev]');
+  const next=root.querySelector('[data-book-next]');
+  const status=root.querySelector('[data-book-status]');
+  const loading=root.querySelector('[data-book-loading]');
+  const archiveDialog=root.querySelector('[data-archive-dialog]');
+  const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
+  const design={duration:1200,shadow:0.38};
+  let book=null,active=0,busy=false,lastWidth=0,lastHeight=0,resizeTimer=null,reading=false,queuedResize=false;
+  const last=templates.length-1;
+  const websiteStateKey='kaba-portfolio-page-'+templates.length;
+  const legacyPreviews=new Map();
+  // Adapted from the original 2022 TxtType script, scoped to each preview.
+  function TxtType(element,toRotate,period){
+    this.toRotate=toRotate;this.el=element;this.loopNum=0;this.period=parseInt(period,10)||2000;
+    this.txt='';this.isDeleting=false;this.running=false;this.timer=null;
+  }
+  TxtType.prototype.tick=function(){
+    if(!this.running||!root.isConnected){this.running=false;return;}
+    const fullTxt=this.toRotate[this.loopNum%this.toRotate.length];
+    this.txt=fullTxt.substring(0,this.txt.length+(this.isDeleting?-1:1));
+    this.el.textContent=this.txt;
+    let delta=200-Math.random()*100;
+    if(this.isDeleting)delta/=2;
+    if(!this.isDeleting&&this.txt===fullTxt){delta=this.period;this.isDeleting=true;}
+    else if(this.isDeleting&&this.txt===''){this.isDeleting=false;this.loopNum++;delta=500;}
+    this.timer=setTimeout(()=>{this.timer=null;this.tick();},delta);
+  };
+  TxtType.prototype.setActive=function(enabled){
+    if(motion.matches){
+      clearTimeout(this.timer);this.timer=null;this.running=false;this.loopNum=0;
+      this.txt=this.toRotate[0];this.isDeleting=false;this.el.textContent=this.txt;return;
+    }
+    if(enabled&&!this.running){this.running=true;this.tick();}
+    else if(!enabled&&this.running){clearTimeout(this.timer);this.timer=null;this.running=false;}
+  };
+  function fitLegacyPreview(element){
+    if(element.clientWidth>0)element.style.setProperty('--legacy-scale',String(element.clientWidth/1280));
+  }
+  function activateLegacyPreview(element,preview){
+    const inDialog=!!element.closest('[data-archive-dialog]');
+    const inReader=!!element.closest('[data-book-reader]');
+    const leaf=element.closest('.bk-leaf');
+    const shown=inDialog?archiveDialog.open:!archiveDialog.open&&(inReader?reading:!reading&&leaf&&leaf.getAttribute('aria-hidden')==='false');
+    preview.writer.setActive(!!shown&&preview.intersecting);
+  }
+  const legacySizeObserver=new ResizeObserver(entries=>entries.forEach(entry=>fitLegacyPreview(entry.target)));
+  const legacyIntersectionObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+    const preview=legacyPreviews.get(entry.target);
+    if(preview){preview.intersecting=entry.isIntersecting;activateLegacyPreview(entry.target,preview);}
+  }),{threshold:.01});
+  function syncLegacyPreviews(){
+    for(const [element,preview] of legacyPreviews){
+      if(!root.contains(element)){
+        preview.writer.setActive(false);legacySizeObserver.unobserve(element);legacyIntersectionObserver.unobserve(element);legacyPreviews.delete(element);
+      }
+    }
+    root.querySelectorAll('[data-legacy-site]').forEach(element=>{
+      if(!legacyPreviews.has(element)){
+        const typewriter=element.querySelector('[data-legacy-typewriter]');
+        const preview={intersecting:false,writer:new TxtType(typewriter.querySelector('[data-legacy-text]'),JSON.parse(typewriter.dataset.type),typewriter.dataset.period)};
+        legacyPreviews.set(element,preview);legacySizeObserver.observe(element);legacyIntersectionObserver.observe(element);
+      }
+      fitLegacyPreview(element);activateLegacyPreview(element,legacyPreviews.get(element));
+    });
+  }
+  function visiblePages(){
+    if(!book)return [0];
+    if(book.getOrientation()==='portrait'||active===0||active===last)return [active];
+    const left=active%2===1?active:active-1;
+    return [left,left+1].filter(i=>i>=0&&i<=last);
+  }
+  function describe(){
+    const visible=visiblePages();
+    if(active===0)return 'Front cover';
+    if(active===last)return 'Back cover';
+    const range=visible.length===2?`${visible[0]}–${visible[1]}`:`${active}`;
+    const name=templates[active].dataset.chapter||'Work & practice';
+    return `${name} · ${visible.length===2?'Pages':'Page'} ${range} / ${last-1}`;
+  }
+  function sync(){
+    if(!book)return;
+    active=book.getCurrentPageIndex();
+    root.dataset.page=String(active);
+    root.dataset.backCover=String(active===last);
+    root.dataset.orientation=book.getOrientation();
+    root.dataset.flipping=String(busy);
+    previous.disabled=busy||active===0||reading;
+    next.disabled=busy||active===last||reading;
+    next.textContent=active===0?'Open book →':'Next →';
+    status.textContent=reading?`Reading view · ${templates.length} pages`:describe();
+    const visible=visiblePages();
+    root.querySelectorAll('[data-book] .bk-leaf').forEach((p,i)=>{p.setAttribute('aria-hidden',String(!visible.includes(i)));p.inert=!visible.includes(i);});
+    root.querySelectorAll('.bk-chapters [data-book-goto]').forEach(b=>{
+      const page=Number(b.dataset.bookGoto);
+      const sameChapter=templates[page]&&templates[page].dataset.chapter===templates[active].dataset.chapter;
+      if(sameChapter)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');
+      b.disabled=busy;
+    });
+    syncLegacyPreviews();
+  }
+  function save(){
+    if(website){try{localStorage.setItem(websiteStateKey,String(active));}catch{}return;}
+    if(window.openai&&window.openai.setWidgetState)window.openai.setWidgetState({modelContent:{practiceBookPage:active},privateContent:{practiceBookReading:reading}}).catch(()=>{});
+  }
+  function build(){
+    if(!globalThis.St||!St.PageFlip){loading.textContent='Page turns could not load. Reading view is available below.';root.querySelector('[data-book-reading]').hidden=false;return;}
+    if(busy){queuedResize=true;return;}
+    const width=website?stage.clientWidth:rig.clientWidth;
+    if(width<1)return;
+    lastWidth=width;
+    lastHeight=website?stage.clientHeight:0;
+    let pageWidth,pageHeight=660;
+    if(website){
+      const style=getComputedStyle(stage);
+      const availableWidth=Math.max(1,width-parseFloat(style.paddingLeft)-parseFloat(style.paddingRight));
+      const availableHeight=Math.max(1,lastHeight-parseFloat(style.paddingTop)-parseFloat(style.paddingBottom));
+      const portrait=availableWidth<800;
+      const naturalWidth=Math.floor(portrait?Math.min(440,availableWidth):440);
+      const naturalBookWidth=naturalWidth*(portrait?1:2);
+      const fitHeight=window.matchMedia('(min-width:1040px)').matches&&!reading;
+      const scale=Math.min(1,availableWidth/naturalBookWidth,fitHeight?availableHeight/660:1);
+      pageWidth=Math.max(1,Math.floor(naturalWidth*scale));
+      pageHeight=Math.max(1,Math.floor(660*scale));
+      const contentScale=pageHeight/660;
+      const bookWidth=pageWidth*(portrait?1:2);
+      root.style.setProperty('--bk-web-scale',String(contentScale));
+      root.style.setProperty('--bk-web-page-width',(pageWidth-2)/contentScale+'px');
+      root.style.setProperty('--bk-web-page-height',(pageHeight-2)/contentScale+'px');
+      bookViewport.style.width=bookWidth+'px';bookViewport.style.height=pageHeight+'px';
+      rig.style.width=bookWidth+'px';rig.style.height=pageHeight+'px';
+    }else{
+      const portrait=width<660;
+      pageWidth=Math.floor(portrait?width:Math.min(440,width/2));
+    }
+    const keep=active;
+    if(book){
+      const settings=book.getSettings();
+      Object.assign(settings,{width:pageWidth,height:pageHeight,minWidth:pageWidth,maxWidth:pageWidth,minHeight:pageHeight,maxHeight:pageHeight,flippingTime:design.duration,maxShadowOpacity:design.shadow,showPageCorners:!motion.matches});
+      const element=root.querySelector('[data-book]');
+      element.style.minWidth=pageWidth+'px';element.style.maxWidth=(pageWidth*2)+'px';element.style.minHeight=pageHeight+'px';
+      book.update();book.getUI().setOrientationStyle(book.getOrientation());book.update();sync();return;
+    }
+    rig.replaceChildren();
+    const element=document.createElement('div');element.className='bk-book';element.dataset.book='';
+    templates.forEach(t=>element.appendChild(t.cloneNode(true)));rig.appendChild(element);
+    book=new St.PageFlip(element,{width:pageWidth,height:pageHeight,size:'fixed',usePortrait:true,showCover:true,startPage:keep,drawShadow:true,maxShadowOpacity:design.shadow,flippingTime:design.duration,mobileScrollSupport:true,clickEventForward:true,useMouseEvents:true,showPageCorners:!motion.matches,disableFlipByClick:false,swipeDistance:35,autoSize:true});
+    book.on('flip',event=>{active=Number(event.data);if(!busy){sync();save();}});
+    book.on('changeState',event=>{
+      busy=event.data==='flipping'||event.data==='user_fold';
+      if(!busy){sync();if(queuedResize){queuedResize=false;build();}save();}
+      else{previous.disabled=true;next.disabled=true;root.querySelectorAll('.bk-chapters button').forEach(b=>b.disabled=true);root.dataset.flipping='true';}
+    });
+    book.on('changeOrientation',()=>sync());
+    book.on('init',()=>{root.dataset.ready='true';loading.hidden=true;sync();});
+    root.dataset.ready='true';
+    book.loadFromHTML(element.querySelectorAll('.bk-leaf'));
+    sync();
+  }
+  function go(page){
+    if(reading){root.querySelectorAll('[data-book-reader] .bk-leaf')[page].scrollIntoView({block:'start',behavior:'auto'});return;}
+    if(!book||busy)return;
+    page=Math.max(0,Math.min(last,page));
+    if(motion.matches){book.turnToPage(page);sync();save();}else book.flip(page,'bottom');
+  }
+  previous.addEventListener('click',()=>{
+    if(!book||busy)return;
+    if(motion.matches){book.turnToPrevPage();sync();save();}else book.flipPrev('bottom');
+  });
+  next.addEventListener('click',()=>{
+    if(!book||busy)return;
+    if(motion.matches){book.turnToNextPage();sync();save();}else book.flipNext('bottom');
+  });
+  root.addEventListener('click',event=>{const trigger=event.target.closest('[data-book-goto]');if(trigger&&root.contains(trigger))go(Number(trigger.dataset.bookGoto));});
+  root.addEventListener('click',event=>{const trigger=event.target.closest('[data-archive-preview]');if(trigger&&root.contains(trigger)){archiveDialog.showModal();syncLegacyPreviews();}});
+  root.querySelector('[data-archive-close]').addEventListener('click',()=>archiveDialog.close());
+  archiveDialog.addEventListener('close',syncLegacyPreviews);
+  ['mousedown','touchstart'].forEach(name=>root.addEventListener(name,event=>{
+    const area=event.target.closest('[data-book]');
+    if(!area)return;
+    if(motion.matches||event.target.closest('button,a')){event.stopPropagation();return;}
+    if(name==='mousedown'){
+      const bounds=area.querySelector('.stf__block').getBoundingClientRect();
+      const edge=90;
+      const onHorizontalEdge=event.clientX-bounds.left<edge||bounds.right-event.clientX<edge;
+      const onVerticalEdge=event.clientY-bounds.top<edge||bounds.bottom-event.clientY<edge;
+      if(!onHorizontalEdge||!onVerticalEdge)event.stopPropagation();
+    }
+  },true));
+  root.addEventListener('keydown',event=>{if(archiveDialog.open||event.altKey||event.ctrlKey||event.metaKey||['INPUT','SELECT','TEXTAREA'].includes(event.target.tagName))return;if(event.key==='ArrowRight'){event.preventDefault();next.click();}else if(event.key==='ArrowLeft'){event.preventDefault();previous.click();}});
+  root.querySelector('[data-book-reading]').addEventListener('click',()=>{
+    reading=!reading;root.dataset.reading=String(reading);
+    const reader=root.querySelector('[data-book-reader]');
+    if(reading&&reader.children.length===0)templates.forEach(t=>{const p=t.cloneNode(true);p.removeAttribute('aria-hidden');p.inert=false;reader.appendChild(p);});
+    root.querySelector('[data-book-reading]').textContent=reading?'Return to flipbook':'Read without page turns';
+    sync();save();
+    if(!reading)build();
+  });
+  let saved=window.openai&&window.openai.widgetState;
+  if(website){try{saved={modelContent:{practiceBookPage:Number(localStorage.getItem(websiteStateKey))}};}catch{saved=null;}}
+  if(saved&&saved.modelContent&&Number.isInteger(saved.modelContent.practiceBookPage))active=Math.max(0,Math.min(last,saved.modelContent.practiceBookPage));
+  build();
+  const dimensionTarget=website?stage:rig;
+  const observer=new ResizeObserver(()=>{const width=dimensionTarget.clientWidth;const height=website?dimensionTarget.clientHeight:0;if(Math.abs(width-lastWidth)>2||Math.abs(height-lastHeight)>2){clearTimeout(resizeTimer);resizeTimer=setTimeout(build,120);}});
+  observer.observe(dimensionTarget);
+  motion.addEventListener('change',build);
+  window.addEventListener('openai:set_globals',event=>{const state=event.detail&&event.detail.globals&&event.detail.globals.widgetState;const page=state&&state.modelContent&&state.modelContent.practiceBookPage;if(Number.isInteger(page)&&page!==active&&!busy&&book){book.turnToPage(Math.max(0,Math.min(last,page)));sync();}});
+  if(globalThis.Tweak){const tweak=new Tweak({container:root,onChange:build});tweak.addSlider(design,'duration',{label:'Turn duration',min:700,max:1800,step:100,unit:'ms'});tweak.addSlider(design,'shadow',{label:'Page shadow',min:0.1,max:0.7,step:0.05});}
+})();
+</script>
+</section>
+
+</main>
 </body>
-<footer>
-    © 2022 by Kaba. All rights reserved.
-</footer>
-<script src="/js/typewriter.js"></script> 
 </html>
