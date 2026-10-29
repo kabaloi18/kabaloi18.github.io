@@ -142,7 +142,6 @@ body { background: #e5e3de; }
 #pf-flipbook[data-website] .bk-client-work-note { margin: 22px 0 18px; font-size: 14px; line-height: 1.6; color: var(--bk-blue); font-weight: 500; }
 #pf-flipbook[data-website] .bk-inline-link { padding: 0; text-align: left; color: var(--bk-blue); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 #pf-flipbook[data-website] .bk-contact-intro { margin-bottom: 0!important; }
-#pf-flipbook[data-website] .bk-resume-download { font-size: 14px; }
 #pf-flipbook[data-website] .bk-contact-link { font-size: 15px; }
 #pf-flipbook[data-website] .bk-contact-link:hover { text-decoration: underline; text-underline-offset: 4px; }
 #pf-flipbook[data-website] .bk-archive-preview > .bk-archive-label { font-size: 13px; align-items: center; margin-top: 8px; text-decoration: underline; text-underline-offset: 3px; }
