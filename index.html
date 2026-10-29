@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="only light">
   <meta name="description" content="Kaba Loi’s experience in UI design, front-end development and client delivery, from initial scoping to handover. Explore the interactive book and request selected client work.">
   <title>Kaba Loi — Design &amp; development</title>
-  <link rel="stylesheet" href="website.css?v=ee15dd6bb348">
+  <link rel="stylesheet" href="website.css?v=4221de4fb5eb">
 </head>
 <body>
 <main>
@@ -97,6 +97,7 @@
 #pf-flipbook button:disabled{opacity:.38}
 #pf-flipbook .bk-status{font-size:11px;line-height:1.6;text-align:center;color:var(--bk-muted)}
 #pf-flipbook .bk-disclaimer{font-size:11px;line-height:1.5;color:var(--bk-muted);padding:0 34px 20px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+#pf-flipbook .bk-footer-download{display:inline-flex;align-items:center;gap:8px}
 #pf-flipbook .bk-reading-control{font-size:12px;min-height:40px;padding:8px 0;text-align:left}
 #pf-flipbook .bk-loading{font-size:12px;color:var(--bk-muted);padding:12px 34px;text-align:center}
 #pf-flipbook[data-ready=false] [data-book] .bk-leaf:not(:first-child){display:none}
@@ -411,7 +412,7 @@
 <div class="bk-reader" data-book-reader></div>
 <div class="bk-loading" data-book-loading>Preparing the book…</div>
 <footer class="bk-controls"><button type="button" class="cursor-interaction" data-book-prev disabled>← Previous</button><p class="bk-status" data-book-status role="status" aria-live="polite">Front cover</p><button type="button" class="cursor-interaction" data-book-next disabled>Open book →</button></footer>
-<nav class="bk-disclaimer" aria-label="Book shortcuts"><div class="bk-quicklinks"><a class="cursor-interaction" href="downloads/Kaba-Loi-Resume.pdf?v=c117e8ab6d9d" download="Kaba-Loi-Resume.pdf" type="application/pdf" aria-label="Download résumé (PDF)"><svg class="bk-file-icon" aria-hidden="true" width="16" height="18" viewBox="0 0 20 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 1h9l6 6v16H3zM12 1v6h6M7 12h7M7 16h7"/></svg>Download résumé</a><button type="button" class="cursor-interaction" data-book-goto="10">Contact</button></div><button type="button" class="bk-reading-control cursor-interaction" data-book-reading>Read as a page</button></nav>
+<nav class="bk-disclaimer" aria-label="Book shortcuts"><a class="bk-footer-download cursor-interaction" href="downloads/Kaba-Loi-Resume.pdf?v=c117e8ab6d9d" download="Kaba-Loi-Resume.pdf" type="application/pdf" aria-label="Download résumé (PDF)"><svg class="bk-arrow-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M8 2v10M4 8l4 4 4-4M3 14h10"/></svg><span>Download résumé</span></a><button type="button" class="bk-footer-contact cursor-interaction" data-book-goto="10">Get in touch</button><button type="button" class="bk-reading-control cursor-interaction" data-book-reading aria-pressed="false">Read as a page</button></nav>
 <dialog class="bk-archive-dialog" data-archive-dialog aria-labelledby="bk-archive-title" aria-describedby="bk-archive-description"><div class="bk-archive-dialog-heading"><div><p class="bk-mono">PERSONAL SIDE PROJECT · 2022</p><h2 id="bk-archive-title">Personal website.</h2></div><button type="button" class="cursor-interaction" data-archive-close>Close <span aria-hidden="true">×</span></button></div><p id="bk-archive-description" class="bk-archive-description">A live preview of Kaba Loi’s 2022 personal website. Its original typewriter cycles through Web development, UI/UX design and 3D modeling.</p><span class="bk-legacy-site" data-legacy-site aria-hidden="true">
   <span class="bk-legacy-canvas">
     <span class="bk-legacy-body">
@@ -514,6 +515,10 @@
     return `${name} · ${visible.length===2?'Pages':'Page'} ${range} / ${last-1}`;
   }
   function sync(){
+    root.querySelectorAll('[data-book-reading]').forEach(button=>{
+      button.setAttribute('aria-pressed',String(reading));
+      button.disabled=busy;
+    });
     if(!book&&root.dataset.fallback!=='true')return;
     if(book)active=book.getCurrentPageIndex();
     root.dataset.page=String(active);
@@ -523,7 +528,7 @@
     previous.disabled=busy||active===0||(reading&&!website);
     next.disabled=busy||active===last||(reading&&!website);
     next.textContent=active===0?'Open book →':'Next →';
-    status.textContent=reading&&!website?`Reading view · ${templates.length} pages`:describe();
+    status.textContent=reading?(website?`Reading view · ${active===0?'Front cover':active===last?'Back cover':`Page ${active} / ${last-1}`}`:`Reading view · ${templates.length} pages`):describe();
     const visible=visiblePages();
     root.querySelectorAll('[data-book] .bk-leaf').forEach((p,i)=>{p.setAttribute('aria-hidden',String(!visible.includes(i)));p.inert=!visible.includes(i);});
     root.querySelectorAll('.bk-chapters [data-book-goto]').forEach(b=>{
@@ -607,7 +612,7 @@
     book.on('changeState',event=>{
       busy=event.data==='flipping'||event.data==='user_fold';
       if(!busy){sync();if(queuedResize){queuedResize=false;build();}save();}
-      else{previous.disabled=true;next.disabled=true;root.querySelectorAll('.bk-chapters button').forEach(b=>b.disabled=true);root.dataset.flipping='true';}
+      else{previous.disabled=true;next.disabled=true;root.querySelectorAll('.bk-chapters button, [data-book-reading]').forEach(b=>b.disabled=true);root.dataset.flipping='true';}
     });
     book.on('changeOrientation',()=>sync());
     book.on('init',()=>{root.dataset.ready='true';loading.hidden=true;sync();});
@@ -658,7 +663,7 @@
     if(busy)return;
     reading=!reading;root.dataset.reading=String(reading);
     if(website){
-      root.querySelectorAll('[data-book-reading]').forEach(button=>button.textContent=reading?'Return to flipbook':'Read as a page');
+      root.querySelectorAll('[data-book-reading]').forEach(button=>button.textContent=reading?'Back to book':'Read as a page');
       build();sync();save();return;
     }
     const reader=root.querySelector('[data-book-reader]');
