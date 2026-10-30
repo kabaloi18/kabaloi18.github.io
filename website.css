@@ -24,6 +24,7 @@ body { background: #e5e3de; }
 }
 #pf-flipbook[data-website] .cursor-interaction { cursor: pointer; }
 #pf-flipbook[data-website] button:disabled { cursor: default; }
+#pf-flipbook[data-website] [aria-disabled="true"] { cursor: default; opacity: .45; }
 #pf-flipbook[data-website] :is(button, a):focus-visible { outline: 2px solid var(--bk-blue); outline-offset: 4px; }
 /* The site signature and reading tools share the open book's outer edges. */
 #pf-flipbook[data-website] .bk-header,
@@ -90,6 +91,13 @@ body { background: #e5e3de; }
 #pf-flipbook[data-website] .bk-controls button { font-size: 14px; min-width: 82px; }
 #pf-flipbook[data-website] [data-book-prev] { text-align: left; }
 #pf-flipbook[data-website] .bk-status { font-size: 12px; line-height: 1.4; }
+#pf-flipbook[data-website] .bk-page-control { position: relative; display: flex; align-items: center; justify-content: center; min-width: 0; min-height: 44px; flex: 1; max-width: 380px; padding-right: 18px; }
+#pf-flipbook[data-website] .bk-page-control select { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; font: 16px 'IBM Plex Sans', sans-serif; }
+#pf-flipbook[data-website] .bk-page-control:focus-within { outline: 2px solid var(--bk-blue); outline-offset: 3px; }
+#pf-flipbook[data-website] .bk-section-chevron { position: absolute; right: 0; pointer-events: none; color: var(--bk-muted); }
+@media (hover: hover) {
+  #pf-flipbook[data-website] .bk-page-control:hover :is(.bk-status, .bk-section-chevron) { color: var(--bk-blue); }
+}
 #pf-flipbook[data-website] .bk-disclaimer { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); grid-row: 4; height: var(--bk-footer-height); align-items: center; gap: 16px; }
 #pf-flipbook[data-website] .bk-disclaimer :is(button, a) {
   display: inline-flex;
@@ -116,12 +124,12 @@ body { background: #e5e3de; }
 #pf-flipbook[data-website] .bk-archive-figure figcaption,
 #pf-flipbook[data-website] .bk-practice-section p,
 #pf-flipbook[data-website] .bk-product-feedback p,
-#pf-flipbook[data-website] .bk-work-ledger { font-size: 14px; line-height: 1.6; }
+#pf-flipbook[data-website] .bk-work-ledger { font-size: 15px; line-height: 1.55; }
 #pf-flipbook[data-website] .bk-body + .bk-body { margin-top: 15px; }
 #pf-flipbook[data-website] .bk-title,
 #pf-flipbook[data-website] .bk-editorial-page .bk-title,
 #pf-flipbook[data-website] .bk-intro-title,
-#pf-flipbook[data-website] .bk-contact-title { font-size: 36px; margin: 24px 0!important; }
+#pf-flipbook[data-website] .bk-contact-title { font-size: 36px; margin: 20px 0!important; }
 #pf-flipbook[data-website] .bk-role { font-size: 14px; margin-bottom: 20px!important; }
 #pf-flipbook[data-website] .bk-emphasis { font-weight: 500; }
 #pf-flipbook[data-website] .bk-cover:not(.bk-last) .bk-page { justify-content: center; }
@@ -148,7 +156,7 @@ body { background: #e5e3de; }
 #pf-flipbook[data-website] .bk-skill-group { padding: 17px 0; }
 #pf-flipbook[data-website] .bk-skills-page .bk-title + .bk-skill-group { border-top: 0; padding-top: 0; }
 #pf-flipbook[data-website] .bk-skill-group h3 { font-size: 15px; }
-#pf-flipbook[data-website] .bk-skill-group p { font-size: 14px; line-height: 1.65; }
+#pf-flipbook[data-website] .bk-skill-group p { font-size: 15px; line-height: 1.6; }
 #pf-flipbook[data-website] .bk-cover-return { align-self: center; display: inline-flex; align-items: center; gap: 12px; margin-top: 28px; min-height: 44px; padding: 10px 16px; border: 1px solid var(--bk-line); color: var(--bk-blue); font-size: 14px; line-height: 1.5; }
 #pf-flipbook[data-website] .bk-cover-return:hover { border-color: var(--bk-blue); }
 #pf-flipbook[data-website] .bk-practice-page .bk-title { font-size: 34px; margin: 12px 0 18px!important; }
@@ -161,10 +169,10 @@ body { background: #e5e3de; }
 
 /* A visibly flat reading view keeps every page and control inside the viewport. */
 #pf-flipbook[data-website] .bk-reader,
-#pf-flipbook[data-website][data-reading="true"] .bk-reader,
 #pf-flipbook[data-website] .bk-reader-bar { display: none; }
 #pf-flipbook[data-website][data-reading="true"] { --bk-stage: var(--bk-paper); }
-#pf-flipbook[data-website][data-reading="true"] .bk-stage { display: flex; perspective: none; }
+#pf-flipbook[data-website][data-reading="true"] .bk-stage { display: none; }
+#pf-flipbook[data-website][data-reading="true"][data-reader-available="false"] .bk-stage { display: flex; }
 #pf-flipbook[data-website][data-reading="true"] .bk-rig { transform: translateX(-50%); transition: none; filter: none; }
 #pf-flipbook[data-website][data-reading="true"] .bk-book::after,
 #pf-flipbook[data-website][data-reading="true"] .bk-cover .bk-page::before,
@@ -224,7 +232,7 @@ body { background: #e5e3de; }
   #pf-flipbook[data-website] .bk-index-title { font-size: 20px; }
   #pf-flipbook[data-website] .bk-index-type { font-size: 11px; }
   #pf-flipbook[data-website] .bk-practice-page .bk-title { font-size: 29px; margin: 8px 0 16px!important; }
-  #pf-flipbook[data-website] .bk-practice-intro { font-size: 14px; }
+  #pf-flipbook[data-website] .bk-practice-intro { font-size: 15px; }
   #pf-flipbook[data-website] .bk-practice-sections { margin-top: 20px; gap: 20px; }
   #pf-flipbook[data-website] .bk-practice-page h3 { font-size: 16px; }
   #pf-flipbook[data-website] .bk-work-ledger { margin-top: 18px; }
@@ -233,7 +241,7 @@ body { background: #e5e3de; }
   #pf-flipbook[data-website] .bk-work-ledger dd { display: inline; }
   #pf-flipbook[data-website] .bk-work-ledger dt { margin-right: 5px; }
   #pf-flipbook[data-website] .bk-product-feedback { margin-top: 18px; }
-  #pf-flipbook[data-website] .bk-skill-group p { font-size: 13px; }
+  #pf-flipbook[data-website] .bk-skill-group p { font-size: 14px; }
   #pf-flipbook[data-website] .bk-skill-group { padding: 15px 0; }
 }
 @media (max-width: 360px) {

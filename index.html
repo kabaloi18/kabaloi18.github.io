@@ -6,7 +6,9 @@
   <meta name="color-scheme" content="only light">
   <meta name="description" content="Kaba Loi’s experience in UI design, front-end development and client delivery, from initial scoping to handover. Explore the interactive book and request selected client work.">
   <title>Kaba Loi — Design &amp; development</title>
-  <link rel="stylesheet" href="website.css?v=63d9aaa12f3e">
+  <link rel="stylesheet" href="website.css?v=15b85d99946e">
+  <link rel="stylesheet" href="reading-view.css?v=ae5bea312d12">
+  <script src="reading-view.js?v=ecb330f3bb4c"></script>
 </head>
 <body>
 <main>
@@ -261,7 +263,7 @@
       <button type="button" class="cursor-interaction" data-book-goto="8"><span class="bk-index-number">08</span><span><span class="bk-index-title">Education</span><span class="bk-index-type">Interaction design · software engineering</span></span><span class="bk-link-arrow" aria-hidden="true"><svg class="bk-arrow-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></span></button>
       
       <button type="button" class="cursor-interaction" data-book-goto="9"><span class="bk-index-number">09</span><span><span class="bk-index-title">Skills &amp; tools</span><span class="bk-index-type">Design · collaboration · development</span></span><span class="bk-link-arrow" aria-hidden="true"><svg class="bk-arrow-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></span></button>
-      <button type="button" class="cursor-interaction" data-book-goto="10"><span class="bk-index-number">10</span><span><span class="bk-index-title">Contact</span><span class="bk-index-type">Client work · résumé · enquiries</span></span><span class="bk-link-arrow" aria-hidden="true"><svg class="bk-arrow-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></span></button>
+      <button type="button" class="cursor-interaction" data-book-goto="10"><span class="bk-index-number">10</span><span><span class="bk-index-title">Contact</span><span class="bk-index-type">Email · LinkedIn · client work</span></span><span class="bk-link-arrow" aria-hidden="true"><svg class="bk-arrow-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></span></button>
     </div>
     <div class="bk-page-number"><span></span><span>01</span></div>
   </div>
@@ -406,8 +408,8 @@
 </div></div></div></div>
 <div class="bk-reader" data-book-reader></div>
 <div class="bk-loading" data-book-loading>Preparing the book…</div>
-<footer class="bk-controls"><button type="button" class="cursor-interaction" data-book-prev disabled>← Previous</button><p class="bk-status" data-book-status role="status" aria-live="polite">Front cover</p><button type="button" class="cursor-interaction" data-book-next disabled>Open book →</button></footer>
-<nav class="bk-disclaimer" aria-label="Book shortcuts"><a class="bk-footer-download cursor-interaction" href="downloads/Kaba-Loi-Resume.pdf?v=c117e8ab6d9d" download="Kaba-Loi-Resume.pdf" type="application/pdf" aria-label="Download résumé (PDF)"><svg class="bk-arrow-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M8 2v10M4 8l4 4 4-4M3 14h10"/></svg><span>Download résumé</span></a><button type="button" class="bk-footer-contact cursor-interaction" data-book-goto="10">Get in touch</button><button type="button" class="bk-reading-control cursor-interaction" data-book-reading aria-pressed="false">Read as a page</button></nav>
+<footer class="bk-controls"><button type="button" class="cursor-interaction" data-book-prev disabled>← Previous</button><div class="bk-page-control"><p class="bk-status" id="bk-page-status" data-book-status role="status" aria-live="polite">Front cover</p><select data-book-select aria-label="Jump to a section" aria-describedby="bk-page-status" hidden></select><svg class="bk-section-chevron" aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" hidden><path d="m3 4.5 3 3 3-3"/></svg></div><button type="button" class="cursor-interaction" data-book-next disabled>Open book →</button></footer>
+<nav class="bk-disclaimer" aria-label="Book shortcuts"><a class="bk-footer-download cursor-interaction" href="downloads/Kaba-Loi-Resume.pdf?v=8874a8a661e5" download="Kaba-Loi-Resume.pdf" type="application/pdf" aria-label="Download résumé (PDF)"><svg class="bk-arrow-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M8 2v10M4 8l4 4 4-4M3 14h10"/></svg><span>Download résumé</span></a><button type="button" class="bk-footer-contact cursor-interaction" data-book-goto="10">Get in touch</button><button type="button" class="bk-reading-control cursor-interaction" data-book-reading aria-pressed="false">Read as a page</button></nav>
 <dialog class="bk-archive-dialog" data-archive-dialog aria-labelledby="bk-archive-title" aria-describedby="bk-archive-description"><div class="bk-archive-dialog-heading"><div><p class="bk-mono">PERSONAL SIDE PROJECT · 2022</p><h2 id="bk-archive-title">Personal website.</h2></div><button type="button" class="cursor-interaction" data-archive-close>Close <span aria-hidden="true">×</span></button></div><p id="bk-archive-description" class="bk-archive-description">A live preview of Kaba Loi’s 2022 personal website. Its original typewriter cycles through Web development, UI/UX design and 3D modeling.</p><span class="bk-legacy-site" data-legacy-site aria-hidden="true">
   <span class="bk-legacy-canvas">
     <span class="bk-legacy-body">
@@ -435,12 +437,39 @@
   const status=root.querySelector('[data-book-status]');
   const loading=root.querySelector('[data-book-loading]');
   const archiveDialog=root.querySelector('[data-archive-dialog]');
+  const readerContainer=root.querySelector('[data-book-reader]');
+  const sectionSelect=root.querySelector('[data-book-select]');
   const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
   const design={duration:1200,shadow:0.38};
   let book=null,active=0,busy=false,lastWidth=0,lastHeight=0,resizeTimer=null,reading=false,queuedResize=false;
+  let pendingFocus=null,textReader=null,focusFrame=0;
   const last=templates.length-1;
   const websiteStateKey='kaba-portfolio-page-'+templates.length;
   const legacyPreviews=new Map();
+  if(website){
+    templates.forEach((template,index)=>{
+      const option=document.createElement('option');
+      const heading=template.querySelector('h1,h2,.bk-last-title').cloneNode(true);
+      heading.querySelectorAll('br').forEach(br=>br.replaceWith(' '));
+      const title=index===0?'Front cover':index===last?'Back cover':heading.textContent.replace(/\s+/g,' ').trim().replace(/\.$/,'');
+      option.value=String(index);option.textContent=index===0||index===last?title:`${String(index).padStart(2,'0')} · ${title}`;
+      sectionSelect.appendChild(option);
+    });
+    sectionSelect.hidden=false;root.querySelector('.bk-section-chevron').removeAttribute('hidden');
+    sectionSelect.addEventListener('change',()=>{if(busy){sectionSelect.value=String(active);return;}go(Number(sectionSelect.value),{focus:true});});
+    if(window.FolioReader)textReader=new window.FolioReader({root,container:readerContainer,templates,onChange:state=>{active=state.page;sync();save();}});
+    root.dataset.readerAvailable=String(!!textReader);
+    if(!textReader)root.querySelectorAll('[data-book-reading]').forEach(button=>button.hidden=true);
+  }
+  function focusDestination(){
+    if(pendingFocus===null||busy)return;
+    const leaf=website&&reading&&textReader?readerContainer.querySelector('[data-reader-page]'):root.querySelectorAll('[data-book] .bk-leaf')[pendingFocus];
+    if(!leaf||leaf.inert)return;
+    const target=leaf.querySelector('h1,h2,h3')||leaf;
+    target.tabIndex=-1;target.focus({preventScroll:true});
+    if(document.activeElement===target)pendingFocus=null;
+    else if(!focusFrame)focusFrame=requestAnimationFrame(()=>{focusFrame=0;focusDestination();});
+  }
   // Adapted from the original 2022 TxtType script, scoped to each preview.
   function TxtType(element,toRotate,period){
     this.toRotate=toRotate;this.el=element;this.loopNum=0;this.period=parseInt(period,10)||2000;
@@ -472,7 +501,7 @@
     const inDialog=!!element.closest('[data-archive-dialog]');
     const inReader=!!element.closest('[data-book-reader]');
     const leaf=element.closest('.bk-leaf');
-    const shown=inDialog?archiveDialog.open:!archiveDialog.open&&(inReader?reading:(website||!reading)&&leaf&&leaf.getAttribute('aria-hidden')==='false');
+    const shown=inDialog?archiveDialog.open:!archiveDialog.open&&(inReader?reading:!reading&&leaf&&leaf.getAttribute('aria-hidden')==='false');
     preview.writer.setActive(!!shown&&preview.intersecting);
   }
   const legacySizeObserver=new ResizeObserver(entries=>entries.forEach(entry=>fitLegacyPreview(entry.target)));
@@ -496,6 +525,7 @@
     });
   }
   function visiblePages(){
+    if(website&&reading&&textReader)return [active];
     if(!book)return [active];
     if(book.getOrientation()==='portrait'||active===0||active===last)return [active];
     const left=active%2===1?active:active-1;
@@ -512,20 +542,28 @@
   function sync(){
     root.querySelectorAll('[data-book-reading]').forEach(button=>{
       button.setAttribute('aria-pressed',String(reading));
-      button.disabled=busy;
+      button.setAttribute('aria-disabled',String(busy));
     });
-    if(!book&&root.dataset.fallback!=='true')return;
-    if(book)active=book.getCurrentPageIndex();
+    if(!book&&root.dataset.fallback!=='true'&&!(website&&reading&&textReader))return;
+    if(book&&!(website&&reading&&textReader))active=book.getCurrentPageIndex();
+    const readerState=website&&reading&&textReader?textReader.getState():null;
     root.dataset.page=String(active);
     root.dataset.backCover=String(active===last);
-    root.dataset.orientation=book?book.getOrientation():'portrait';
+    root.dataset.orientation=readerState?'portrait':book?book.getOrientation():'portrait';
     root.dataset.flipping=String(busy);
-    previous.disabled=busy||active===0||(reading&&!website);
-    next.disabled=busy||active===last||(reading&&!website);
+    previous.disabled=(active===0&&(!readerState||readerState.part===0))||(reading&&!website);
+    next.disabled=(active===last&&(!readerState||readerState.part===readerState.parts-1))||(reading&&!website);
+    previous.setAttribute('aria-disabled',String(busy||previous.disabled));
+    next.setAttribute('aria-disabled',String(busy||next.disabled));
     next.textContent=active===0?'Open book →':'Next →';
     status.textContent=reading?(website?`Reading view · ${active===0?'Front cover':active===last?'Back cover':`Page ${active} / ${last-1}`}`:`Reading view · ${templates.length} pages`):describe();
+    if(readerState){
+      root.dataset.readingPart=String(readerState.part);root.dataset.readingParts=String(readerState.parts);
+      if(readerState.parts>1)status.textContent=`Page ${active} · Part ${readerState.part+1} / ${readerState.parts}`;
+    }
+    if(website){sectionSelect.value=String(active);sectionSelect.setAttribute('aria-disabled',String(busy));}
     const visible=visiblePages();
-    root.querySelectorAll('[data-book] .bk-leaf').forEach((p,i)=>{p.setAttribute('aria-hidden',String(!visible.includes(i)));p.inert=!visible.includes(i);});
+    root.querySelectorAll('[data-book] .bk-leaf').forEach((p,i)=>{const hidden=!!readerState||!visible.includes(i);p.setAttribute('aria-hidden',String(hidden));p.inert=hidden;});
     root.querySelectorAll('.bk-chapters [data-book-goto]').forEach(b=>{
       const page=Number(b.dataset.bookGoto);
       const sameChapter=templates[page]&&templates[page].dataset.chapter===templates[active].dataset.chapter;
@@ -533,6 +571,7 @@
       b.disabled=busy;
     });
     syncLegacyPreviews();
+    focusDestination();
   }
   function save(){
     if(website){try{localStorage.setItem(websiteStateKey,String(active));}catch{}return;}
@@ -549,6 +588,14 @@
       }
     }
     if(busy){queuedResize=true;return;}
+    if(website&&reading&&textReader){
+      root.style.setProperty('--bk-frame-width','680px');
+      lastWidth=readerContainer.clientWidth;lastHeight=readerContainer.clientHeight;
+      stage.inert=true;readerContainer.inert=false;
+      root.dataset.ready='true';loading.hidden=true;
+      textReader.render(active);sync();return;
+    }
+    if(website){stage.inert=false;readerContainer.inert=true;}
     const width=website?stage.clientWidth:rig.clientWidth;
     if(width<1)return;
     lastWidth=width;
@@ -597,17 +644,18 @@
       Object.assign(settings,{width:pageWidth,height:pageHeight,minWidth:pageWidth,maxWidth:pageWidth,minHeight:pageHeight,maxHeight:pageHeight,flippingTime:design.duration,maxShadowOpacity:design.shadow,showPageCorners:!motion.matches&&!reading});
       const element=root.querySelector('[data-book]');
       element.style.minWidth=pageWidth+'px';element.style.maxWidth=(pageWidth*2)+'px';element.style.minHeight=pageHeight+'px';
-      book.update();book.getUI().setOrientationStyle(book.getOrientation());book.update();sync();return;
+      book.update();book.getUI().setOrientationStyle(book.getOrientation());book.update();book.turnToPage(keep);sync();return;
     }
     rig.replaceChildren();
     const element=document.createElement('div');element.className='bk-book';element.dataset.book='';
     templates.forEach(t=>element.appendChild(t.cloneNode(true)));rig.appendChild(element);
     book=new St.PageFlip(element,{width:pageWidth,height:pageHeight,size:'fixed',usePortrait:true,showCover:true,startPage:keep,drawShadow:true,maxShadowOpacity:design.shadow,flippingTime:design.duration,mobileScrollSupport:true,clickEventForward:true,useMouseEvents:true,showPageCorners:!motion.matches&&!reading,disableFlipByClick:false,swipeDistance:35,autoSize:true});
-    book.on('flip',event=>{active=Number(event.data);if(!busy){sync();save();}});
+    book.on('flip',event=>{if(website&&reading&&textReader)return;active=Number(event.data);if(!busy){sync();save();}});
     book.on('changeState',event=>{
+      if(website&&reading&&textReader)return;
       busy=event.data==='flipping'||event.data==='user_fold';
       if(!busy){sync();if(queuedResize){queuedResize=false;build();}save();}
-      else{previous.disabled=true;next.disabled=true;root.querySelectorAll('.bk-chapters button, [data-book-reading]').forEach(b=>b.disabled=true);root.dataset.flipping='true';}
+      else{root.querySelectorAll('[data-book-prev],[data-book-next],[data-book-reading],[data-book-select]').forEach(b=>b.setAttribute('aria-disabled','true'));root.querySelectorAll('.bk-chapters button').forEach(b=>b.disabled=true);root.dataset.flipping='true';}
     });
     book.on('changeOrientation',()=>sync());
     book.on('init',()=>{root.dataset.ready='true';loading.hidden=true;sync();});
@@ -615,29 +663,36 @@
     book.loadFromHTML(element.querySelectorAll('.bk-leaf'));
     sync();
   }
-  function go(page){
+  function go(page,{focus=false}={}){
+    if(busy)return;
+    page=Math.max(0,Math.min(last,page));
+    if(focus)pendingFocus=page;
     if(reading&&website){
-      if(busy)return;
-      page=Math.max(0,Math.min(last,page));
+      if(textReader){textReader.render(page,{resetPart:true});sync();save();return;}
       if(book)book.turnToPage(page);else active=page;
       sync();save();return;
     }
     if(reading){const target=root.querySelectorAll('[data-book-reader] .bk-leaf')[page];if(target){target.scrollIntoView({block:'start',behavior:'auto'});target.focus({preventScroll:true});}return;}
     if(!book||busy)return;
     page=Math.max(0,Math.min(last,page));
+    if(visiblePages().includes(page)){focusDestination();save();return;}
     if(motion.matches){book.turnToPage(page);sync();save();}else book.flip(page,'bottom');
   }
   previous.addEventListener('click',()=>{
+    if(busy)return;
+    if(website&&reading&&textReader){textReader.step(-1);return;}
     if(website&&reading){go(active-1);return;}
     if(!book||busy)return;
     if(motion.matches){book.turnToPrevPage();sync();save();}else book.flipPrev('bottom');
   });
   next.addEventListener('click',()=>{
+    if(busy)return;
+    if(website&&reading&&textReader){textReader.step(1);return;}
     if(website&&reading){go(active+1);return;}
     if(!book||busy)return;
     if(motion.matches){book.turnToNextPage();sync();save();}else book.flipNext('bottom');
   });
-  root.addEventListener('click',event=>{const trigger=event.target.closest('[data-book-goto]');if(trigger&&root.contains(trigger))go(Number(trigger.dataset.bookGoto));});
+  root.addEventListener('click',event=>{const trigger=event.target.closest('[data-book-goto]');if(trigger&&root.contains(trigger))go(Number(trigger.dataset.bookGoto),{focus:true});});
   root.addEventListener('click',event=>{const trigger=event.target.closest('[data-archive-preview]');if(trigger&&root.contains(trigger)){archiveDialog.showModal();syncLegacyPreviews();}});
   root.querySelector('[data-archive-close]').addEventListener('click',()=>archiveDialog.close());
   archiveDialog.addEventListener('close',syncLegacyPreviews);
@@ -653,12 +708,13 @@
       if(!onHorizontalEdge||!onVerticalEdge)event.stopPropagation();
     }
   },true));
-  root.addEventListener('keydown',event=>{if((reading&&!website)||archiveDialog.open||event.altKey||event.ctrlKey||event.metaKey||['INPUT','SELECT','TEXTAREA'].includes(event.target.tagName))return;if(event.key==='ArrowRight'){event.preventDefault();next.click();}else if(event.key==='ArrowLeft'){event.preventDefault();previous.click();}});
+  (website?document:root).addEventListener('keydown',event=>{if(event.defaultPrevented||(reading&&!website)||archiveDialog.open||event.altKey||event.ctrlKey||event.metaKey||event.target.isContentEditable||['INPUT','SELECT','TEXTAREA'].includes(event.target.tagName))return;if(event.key==='ArrowRight'){event.preventDefault();next.click();}else if(event.key==='ArrowLeft'){event.preventDefault();previous.click();}});
   root.querySelectorAll('[data-book-reading]').forEach(control=>control.addEventListener('click',()=>{
     if(busy)return;
     reading=!reading;root.dataset.reading=String(reading);
     if(website){
       root.querySelectorAll('[data-book-reading]').forEach(button=>button.textContent=reading?'Back to book':'Read as a page');
+      pendingFocus=active;
       build();sync();save();return;
     }
     const reader=root.querySelector('[data-book-reader]');
@@ -680,9 +736,9 @@
   if(saved&&saved.modelContent&&Number.isInteger(saved.modelContent.practiceBookPage))active=Math.max(0,Math.min(last,saved.modelContent.practiceBookPage));
   build();
   if(document.fonts)document.fonts.ready.then(build);
-  const dimensionTarget=website?stage:rig;
-  const observer=new ResizeObserver(()=>{const width=dimensionTarget.clientWidth;const height=website?dimensionTarget.clientHeight:0;if(Math.abs(width-lastWidth)>2||Math.abs(height-lastHeight)>2){clearTimeout(resizeTimer);resizeTimer=setTimeout(build,120);}});
-  observer.observe(dimensionTarget);
+  const observer=new ResizeObserver(()=>{const target=website?(reading&&textReader?readerContainer:stage):rig;const width=target.clientWidth;const height=website?target.clientHeight:0;if(Math.abs(width-lastWidth)>2||Math.abs(height-lastHeight)>2){clearTimeout(resizeTimer);resizeTimer=setTimeout(build,120);}});
+  observer.observe(website?stage:rig);
+  if(website)observer.observe(readerContainer);
   motion.addEventListener('change',build);
   window.addEventListener('openai:set_globals',event=>{const state=event.detail&&event.detail.globals&&event.detail.globals.widgetState;const page=state&&state.modelContent&&state.modelContent.practiceBookPage;if(Number.isInteger(page)&&page!==active&&!busy&&book){book.turnToPage(Math.max(0,Math.min(last,page)));sync();}});
   if(globalThis.Tweak){const tweak=new Tweak({container:root,onChange:build});tweak.addSlider(design,'duration',{label:'Turn duration',min:700,max:1800,step:100,unit:'ms'});tweak.addSlider(design,'shadow',{label:'Page shadow',min:0.1,max:0.7,step:0.05});}
